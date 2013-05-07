@@ -1,72 +1,134 @@
-锘�<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Wenming17's Notes</title>
+<link rel="stylesheet" href="emx_nav_left.css" type="text/css" />
+<script type="text/javascript">
+<!--
+var time = 3000;
+var numofitems = 7;
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Wenming17.github.com : " />
+//menu constructor
+function menu(allitems,thisitem,startstate){ 
+  callname= "gl"+thisitem;
+  divname="subglobal"+thisitem;  
+  this.numberofmenuitems = allitems;
+  this.caller = document.getElementById(callname);
+  this.thediv = document.getElementById(divname);
+  this.thediv.style.visibility = startstate;
+}
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Wenming17.github.com</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/wenming17">View on GitHub</a>
-
-          <h1 id="project_title">Wenming17.github.com</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
+//menu methods
+function ehandler(event,theobj){
+  for (var i=1; i<= theobj.numberofmenuitems; i++){
+    var shutdiv =eval( "menuitem"+i+".thediv");
+    shutdiv.style.visibility="hidden";
+  }
+  theobj.thediv.style.visibility="visible";
+}
+				
+function closesubnav(event){
+  if ((event.clientY <48)||(event.clientY > 107)){
+    for (var i=1; i<= numofitems; i++){
+      var shutdiv =eval('menuitem'+i+'.thediv');
+      shutdiv.style.visibility='hidden';
+    }
+  }
+}
+// -->
+</script>
+</head>
+<body onmousemove="closesubnav(event);">
+<div class="skipLinks">skip to: <a href="#content">page content</a> | <a href="#pageNav">links on this page</a> | <a href="#globalNav">site navigation</a> | <a href="#siteInfo">footer (site information)</a> </div>
+<div id="masthead">
+  <h1 id="siteName">天行健，君子以自强不息</h1>
+  <div id="utility"> <a href="#">Utility Link</a> | <a href="#">Utility Link</a> | <a href="#">Utility Link</a> </div>
+  <div id="globalNav"> <img alt="" src="gblnav_left.gif" height="32" width="4" id="gnl" /> <img alt="" src="glbnav_right.gif" height="32" width="4" id="gnr" />
+    <div id="globalLink"> <a href="#" id="gl1" class="glink" onmouseover="ehandler(event,menuitem1);">首页</a><a href="home.html" id="gl2" class="glink" onmouseover="ehandler(event,menuitem2);">读书笔记</a><a href="#" id="gl3" class="glink" onmouseover="ehandler(event,menuitem3);">项目心得</a><a href="#" id="gl4" class="glink" onmouseover="ehandler(event,menuitem4);">求解释</a><a href="#" id="gl5" class="glink" onmouseover="ehandler(event,menuitem5);">兴趣爱好</a><a href="#" id="gl6" class="glink" onmouseover="ehandler(event,menuitem6);">关于我</a><a href="about.html" id="gl7" class="glink" onmouseover="ehandler(event,menuitem7);">关于她</a> </div>
+    <!--end globalLinks-->
+    <form id="search" action="">
+      <input name="searchFor" type="text" size="10" />
+      <a href="">search</a>
+    </form>
+  </div>
+  <!-- end globalNav -->
+  <div id="subglobal1" class="subglobalNav"> <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> | <a href="#">subglobal1 link</a> </div>
+  <div id="subglobal2" class="subglobalNav"> <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> | <a href="#">subglobal2 link</a> </div>
+  <div id="subglobal3" class="subglobalNav"> <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> | <a href="#">subglobal3 link</a> </div>
+  <div id="subglobal4" class="subglobalNav"> <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> | <a href="#">subglobal4 link</a> </div>
+  <div id="subglobal5" class="subglobalNav"> <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> | <a href="#">subglobal5 link</a> </div>
+  <div id="subglobal6" class="subglobalNav"> <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> | <a href="#">subglobal6 link</a> </div>
+  <div id="subglobal7" class="subglobalNav"> <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> | <a href="#">subglobal7 link</a> </div>
+  <div id="subglobal8" class="subglobalNav"> <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> </div>
+</div>
+<!-- end masthead -->
+<div id="pagecell1">
+  <!--pagecell1-->
+  <img alt="" src="tl_curve_white.gif" height="6" width="6" id="tl" /> <img alt="" src="tr_curve_white.gif" height="6" width="6" id="tr" />
+  <div id="breadCrumb"> <a href="#">Breadcrumb</a> / <a href="#">Breadcrumb</a> / <a href="#">Breadcrumb</a> / </div>
+  <div id="pageName">
+    <h2>WenMing17's Notes </h2>
+    <img alt="small logo" src="" height="59" width="66"/> </div>
+  <div id="pageNav">
+    <div id="sectionLinks"> <a href="#">Section Link</a> <a href="#">Section Link</a> <a href="#">Section Link</a> <a href="#">Section Link</a> <a href="#">Section Link</a> <a href="#">Section Link</a> </div>
+    <div class="relatedLinks">
+      <h3>Related Link Category</h3>
+      <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> </div>
+    <div class="relatedLinks">
+      <h3>Related Link Category</h3>
+      <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> </div>
+    <div id="advert"> <img src="./image/310.jpg" alt="" width="155" height="155" /> 旅行！登山咱就得登山尖儿！ </div>
+  </div>
+  <div id="content">
+    <div class="feature"> <img src="./image/me.jpg" alt="" width="280" height="200" />
+      <h3>关于我 </h3>
+      <p> 年近而立，一无所有。依然浑浑噩噩的浪迹于校园，做着与年龄不相符的事情。喜爱音乐，但趣味正在消减；好吃懒做，却无奈身无分文。迫于生计，偶尔写几行垃圾代码为生。志向着实远大，行动微乎其微。可谓是口头上的巨人，行动上的矮子。有出息的男人会把别人肚子搞大，我却捧着自己的肚皮没心没肺的狂吃狂喝。 </p>
     </div>
-    <div align = "center">
-             |<a href = home.html>棣栭〉</a>|
-	     |<a href = about.html>鍏充簬鎴�</a>|
-    </div>	
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we鈥檒l help you sort it out.</p>
-      </section>
+    <div class="story">
+      <h3>关于现在</h3>
+      <p>求学与广西大学，在读研究生。过着凌晨睡觉中午起床的无忧无虑的不幸生活。业精于勤荒于嬉，之所以想写点儿东西来糟践大家的目光，只是为了证明，我也想做一个积极的人。鉴于这些内容根本没人观看，就像诸位根本不记得你最丑的异性同学脸上是否长青春痘一样，所以，我就自由发挥，爱怎么地就怎么地写了。</p>
+      <p> 既然专业是计算机，也就勉为其难的写一些关于计算机的那些事儿。自从2012-09-08入学以来，做过两个项目，眼下也有了第三个项目。脑子不好使，所以就将项目中遇到的问题以及解决的方法记录于此。首先，有了文字就不怕忘记。其次，有了网络，就随时随地的可以浏览，不必在意是不是在自己的本地。 </p>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <div class="story">
+      <table width="100%" cellpadding="0" cellspacing="0" summary="">
+        <tr valign="top">
+          <td class="storyLeft">
+            <p> <a href="#" class="capsule">高危儿监测系统</a> 高危儿监测系统的功能主要是局域网+数据库存取。也就是将sqlserver2008的免费版数据库设置成局域网可访问的状态。开发工具使用的是c++bulider6.0。用c++语言编写。 在这里我简单的记录下数据库的设置，以及设计和编码阶段遇到的问题。由于该项目规模不大，单人完全可以搞定，所以就没有涉及到版本控制问题。 <a href="#">在这里还有一些安装前的准备工作和经验教训</a>。或者说只是教训而已！</p>          </td>
+          <td>
+            <p> <a href="#" class="capsule">IVA-CPT多动症评估系统</a> 该系统相对于高危儿来说，规模比较大。IVA-CPT多动症评估系统的主要功能是：数据库存取+数据采集+数据分析+文档生成+局域网访问数据库（暂时局域网，接下来还有网络版）。开发工具是vs2010，用c#编写而成。在这里我需要记录一下初次使用c#遇到的问题和学习心得。另外还有版本控制+团队管理的问题，希望能以此得到提高！<a href="#">c#学习心得+项目管理的得与失</a> </p>          </td>
+        </tr>
+        <tr valign="top">
+          <td class="storyLeft">
+            <p> <a href="#" class="capsule">未完待续</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>          </td>
+          <td>
+            <p> <a href="#" class="capsule">继续努力</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>          </td>
+        </tr>
+        <tr valign="top">
+          <td class="storyLeft">
+            <p> <a href="#" class="capsule">未完成</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>          </td>
+          <td>
+            <p> <a href="#" class="capsule">同志仍需努力</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>          </td>
+        </tr>
+      </table>
     </div>
-
-    
-
-  </body>
+  </div>
+  <div id="siteInfo"> <img src="" width="44" height="22" /> <a href="#">About Us</a> | <a href="#">Site Map</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a> | &copy;2003 Company Name </div>
+</div>
+<!--end pagecell1-->
+<br />
+<script type="text/javascript">
+    <!--
+      var menuitem1 = new menu(7,1,"hidden");
+			var menuitem2 = new menu(7,2,"hidden");
+			var menuitem3 = new menu(7,3,"hidden");
+			var menuitem4 = new menu(7,4,"hidden");
+			var menuitem5 = new menu(7,5,"hidden");
+			var menuitem6 = new menu(7,6,"hidden");
+			var menuitem7 = new menu(7,7,"hidden");
+    // -->
+    </script>
+</body>
 </html>

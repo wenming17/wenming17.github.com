@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css/2col_leftNav.css" type="text/css" />
+</head>
+<!-- The structure of this file is exactly the same as 2col_rightNav.html;
+     the only difference between the two is the stylesheet they use -->
+<body>
+<div id="masthead">
+  <h1 id="siteName">默认自己无能，无疑是在为失败找机会！</h1>
+  <div id="globalNav"> <a href="#">global link</a> | <a href="#">global link</a> | <a href="#">global link</a> | <a href="#">global link</a> | <a href="#">global link</a> | <a href="#">global link</a> | <a href="#">global link</a> </div>
+</div>
+<!-- end masthead -->
+<div id="content">
+  <div id="breadCrumb"> <a href="#">breadcrumb</a> / <a href="#">breadcrumb</a> / <a href="#">breadcrumb</a> / </div>
+  <h2 id="pageName">CPT开发难点以及解决方法</h2>
+  <div class="feature"> <img src="" alt="" width="280" height="200" />
+    <h3>需求简介 </h3>
+    <p> CPT是一个通过鼠标点击在屏幕上闪现的图片而获取人的反应时间，并对这些反应时间进行分析的一款软件。由于技术以及其他问题，软件的功能暂且介绍这么多。这里仅叙述开发工具、开发语言、开发过程、难点以及处理方式，安装前的准备工作和项目的管理等。</p>
+  </div>
+  <div class="story">
+    <h3>软件开发</h3>
+    <p> 由于第一次使用c#+vs2010，所以对开发工具的使用不熟练、对开发语言的理解不深刻是显而易见的。比如说，直到现在我都不清楚怎样为vs2010添加行号，同样也很反感为什么v22010的启动以及项目的运行会消耗那么多的内存空间，同样CPU利用率也随之扶摇直上。以前没有刻意的要求过鼠标的点击事件，但是在该项目中，却要求有鼠标的单击和双击。悲剧的是，c#的winform中单双击事件是不能共存的。试想一下，单双击不共存也是可以理解的，因为你双击的时候，总要经过单击。因为这个软件的规模相对较大，所以采取了团队协同作业。很幸运，我遇上了神一样的敌人，却没有碰到猪一般的队友。好吧！上面废话了那么多，下面就有条理的写一下吧。</p>
+    <p>先说对c#的运用吧，通过这个项目，掌握了在panel上画图，甚至在刷新和切换（Alt+Tab）的时候，绘制的画面也不会消失（<a href="#">代码</a>）。同时，还搞定了鼠标在winform上单双击共存的事件（<a href="#">代码</a>）。最后，还是要感谢坤哥，让我掌握了winform中Timer控件（<a href="#">代码</a>）的用法。最后的最后，我还想写一下c#连接sqlserver(<a href="#">代码</a>)的问题，这虽是老生常谈，但写下来以备不时之需。在这款软件中，知识点暂时就这么多，但是还会有其他的暂时没用到的。因为目前开发的只是局域网版，后期还有网络版。所以就要跟数据库服务器打交道了，说不定还会跟应用服务器沾上边儿呢。</p>
+  </div>
+  <div class="story">
+    <h3>团队协作</h3>
+    <p>首先感谢导师梁老师，能够充分的信任我，将软件开发的任务交给我安排。同时也感谢项目组其余两位同学给予我充分的支持，项目能顺利完工，在一定程度上得益于他们的努力付出。在软件开发方面，我并没有任何经验，所以任务的分配不能根据个人的能力而达到每个人都能找到用武之地的目的。接下来我将会记录下在开发工程中遇到的一些跟管理、协调相关的事情，这其实应该是教训。</p>
+    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero. Cras venenatis. Aliquam posuere lobortis pede. Nullam fringilla urna id leo. Praesent aliquet pretium erat. Praesent non odio. Pellentesque a magna a mauris vulputate lacinia. Aenean viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aliquam lacus. Mauris magna eros, semper a, tempor et, rutrum et, tortor. </p>
+  </div>
+</div>
+<!--end content -->
+<div id="navBar">
+  <div id="search">
+    <form action="#">
+      <label>search</label>
+      <input name="searchFor" type="text" size="10" />
+      <input name="goButton" type="submit" value="go" />
+    </form>
+  </div>
+  <div id="sectionLinks">
+    <ul>
+      <li><a href="#">sectionLink</a></li>
+      <li><a href="#">sectionLink</a></li>
+      <li><a href="#">sectionLink</a></li>
+      <li><a href="#">sectionLink</a></li>
+      <li><a href="#">sectionLink</a></li>
+      <li><a href="#">sectionLink</a></li>
+    </ul>
+  </div>
+  <div class="relatedLinks">
+    <h3>Related Link Category</h3>
+    <ul>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+    </ul>
+  </div>
+  <div class="relatedLinks">
+    <h3>Related Link Category</h3>
+    <ul>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+      <li><a href="#">Related Link</a></li>
+    </ul>
+  </div>
+  <div id="advert"> <img src="" alt="" width="107" height="66" /> Ad copy ad copy ad copy. Ad copy ad copy. </div>
+  <div id="headlines">
+    <h3>Headlines</h3>
+    <p> Headline <a href="#">full story...</a> </p>
+    <p> Headline <a href="#">full story...</a> </p>
+    <p> Headline <a href="#">full story...</a> </p>
+    <p> Headline <a href="#">full story...</a> </p>
+  </div>
+</div>
+<!--end navbar -->
+<div id="siteInfo"> <img src="" width="44" height="22" /> <a href="#">About Us</a> | <a href="#">Site Map</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a> | &copy;2003 Company Name </div>
+<br />
+</body>
+</html>
